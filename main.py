@@ -19,9 +19,9 @@ class CommandHandler:
         self.chrline = chrline
         self.messenger = messenger
         self.prefix = prefix
-        self.command_handlers: Dict[str, Callable] = self.register_commands()
+        self.command_handlers = self._register_commands()
 
-    def register_commands(self) -> Dict[str, Callable]:
+    def _register_commands(self) -> Dict[str, Callable]:
         return {
             f"{self.prefix}{cmd}": getattr(self, f"command_{cmd}")
             for cmd in ["help", "speed", "time", "me", "mid", "gid", "userinfo"]
