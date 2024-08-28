@@ -2,3 +2,12 @@
 .venv/
 env/
 venv/
+# Ignore all files in CHRLINE_FIX
+CHRLINE_FIX/*
+bot/
+Quote2_fork/
+# Ignore cache files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
